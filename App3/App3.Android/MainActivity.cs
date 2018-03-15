@@ -23,12 +23,13 @@ namespace App3.Droid
             LoadApplication(new App());
 
             //without the next line "OnOptionsItemSelected" will not be called
-            //this.SetSupportActionBar(this.FindViewById<Toolbar>(Resource.Id.toolbar));
+            this.SetSupportActionBar(this.FindViewById<Toolbar>(Resource.Id.toolbar));
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             //I would like to handle onoptionsitemselected back pressed here :(
+			//Add breakpoint here to see if this function is triggered or not
             return base.OnOptionsItemSelected(item);
         }
     }
